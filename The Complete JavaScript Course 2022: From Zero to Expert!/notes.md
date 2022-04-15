@@ -1,10 +1,10 @@
-### Terminology
+# Terminology
 
 **Paradigms:** Approaches and mindsets of structuring code, which will direct your coding style and technique. <br>
 **Concurrency model:** how Javascript engine handles multiple tasks happening at the same time. <br>
 **Thread (in computing):** set of instructions that is executed on the computer's cpu. <br>
 
-### How JavaScript works behind the scenes
+# How JavaScript works behind the scenes
 
 * **High Level:** Javascript doesnt require to use resources (like memory).
 * **Garbage-collected:** Cleaning memory so we dont have to.
@@ -19,7 +19,7 @@
 *  **Single-threaded:** JavaScript runs in one **single thread**, so it can only do one thing at the time.
 *  **Non-blocking event loop:** Tasks that are taking too long to execute are getting executed in the "background" and get back in the main thread once they are finished.
 
-### JavaScript Engine and Runtime
+# JavaScript Engine and Runtime
 JS Engine - program that executes javascript code <br>
 
 
@@ -39,14 +39,26 @@ JS Engine - program that executes javascript code <br>
                 is executed         are stored
        
        
-#### Compilation vs Interpretation
+## Compilation vs Interpretation
 
 **Compilation:** Entire code is conveted into machine code at once, and written to a binary file that can be executed by a computer. <br>
-
                            
         +++++++++++++++++        Step 1          ++++++++++++++++++++++++++++++++         Step 2         +++++++++++++++++++++
         +  Source Code  +     ------------->     +  Portable file: machine code +     ------------->     +  Program running  +
         +++++++++++++++++      Compilation       ++++++++++++++++++++++++++++++++        Execution       +++++++++++++++++++++
         
         Execution can happen way after compilation
-                                                           
+                                                  
+**Interpritation:** Interpreter runs through the source code and executs line by line.
+
+        +++++++++++++++++            Execution Line by Line            +++++++++++++++++++++
+        +  Source Code  +     ------------------------------------>    +  Program running  +
+        +++++++++++++++++                                              +++++++++++++++++++++
+        
+        Code still needs to be converted to machine code (it happens right before its executed and not ahead of time)
+        
+Interprited languages are much slower then compiled. Modern JavaScript uses mix between compilation and interpritation which is called **Just-in-time (JIT) compilation:** Entire code is converted in machine code at once, then executed immediately.
+
+       +++++++++++++++++        Step 1          ++++++++++++++++++++++++++++++++++++++++                    Step 2                     +++++++++++++++++++++
+        +  Source Code  +     ------------->     +  Machine code (NOT a portable file  +     ------------------------------------>     +  Program running  +
+        +++++++++++++++++      Compilation       +++++++++++++++++++++++++++++++++++++++        Execution (Happens immediately)        +++++++++++++++++++++
