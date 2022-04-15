@@ -1,8 +1,8 @@
 ### Terminology
 
-Paradigms: Approaches and mindsets of structuring code, which will direct your coding style and technique. <br>
-Concurrency model: how Javascript engine handles multiple tasks happening at the same time. <br>
-Thread (in computing): set of instructions that is executed on the computer's cpu. <br>
+**Paradigms:** Approaches and mindsets of structuring code, which will direct your coding style and technique. <br>
+**Concurrency model:** how Javascript engine handles multiple tasks happening at the same time. <br>
+**Thread (in computing):** set of instructions that is executed on the computer's cpu. <br>
 
 ### How JavaScript works behind the scenes
 
@@ -39,4 +39,14 @@ JS Engine - program that executes javascript code <br>
                 is executed         are stored
        
        
-       
+#### Compilation vs Interpretation
+
+**Compilation:** Entire code is conveted into machine code at once, and written to a binary file that can be executed by a computer. <br>
+
+                           
+        +++++++++++++++++        Step 1          ++++++++++++++++++++++++++++++++         Step 2         +++++++++++++++++++++
+        +  Source Code  +     ------------->     +  Portable file: machine code +     ------------->     +  Program running  +
+        +++++++++++++++++      Compilation       ++++++++++++++++++++++++++++++++        Execution       +++++++++++++++++++++
+        
+        Execution can happen way after compilation
+                                                           
