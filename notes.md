@@ -22,21 +22,27 @@
 # JavaScript Engine and Runtime
 JS Engine - program that executes javascript code <br>
 
+                                                      Runtime in the Browser
+            *************** JS Engine ***************                     *************** Web APIs *************** 
 
-            *************** JS Engine ***************
-
-                +++++++++++++++     +++++++++++++++    
-                +             +     +   #    #    +    
-                +             +     +           # +    
-                +             +     +     #       +    
-                +             +     +   #      #  +           
-    Execution   + ########### +     + #    #      +     Object in       
-    context ->  + ########### +     +   #   #     +  <- memory       
-                +++++++++++++++     +++++++++++++++
-                   CALL STACK             HEAP              
-                   
-                Where our code      Where objects
+                +++++++++++++++     +++++++++++++++                           ++++++++++++++++++++++++++++++   Functionalities provided 
+                +             +     +   #    #    +                           +     DOM     +    Timers    +   to the engine, accessible
+                +             +     +           # +                           ++++++++++++++++++++++++++++++   on window object.
+                +             +     +     #       +                           +  Fetch API  +    . . .    + 
+                +             +     +   #      #  +                           ++++++++++++++++++++++++++++++
+    Execution   + ########### +     + #    #      +     Object in           
+    context ->  + ########### +     +   #   #     +  <- memory             *************** Callback Queue *************** 
+                +++++++++++++++     +++++++++++++++                         
+                   CALL STACK             HEAP                               Click      Timer     Data     . . .
+                                                                             
+                Where our code      Where objects                          Example: callback function from DOM event listener
                 is executed         are stored
+                
+                
+                Event Loop takes callback function from the callback queue and puts them in the callstack so that they can be executed.
+                Event Loop is essential for non-blocking concurrency model
+                
+                Runtime in Node.js: instead of Web APIs it uses C++ bindings and thread pool.
        
        
 ## Compilation vs Interpretation
@@ -62,3 +68,5 @@ Interprited languages are much slower then compiled. Modern JavaScript uses mix 
        +++++++++++++++++        Step 1          ++++++++++++++++++++++++++++++++++++++++                    Step 2                     +++++++++++++++++++++
         +  Source Code  +     ------------->     +  Machine code (NOT a portable file  +     ------------------------------------>     +  Program running  +
         +++++++++++++++++      Compilation       +++++++++++++++++++++++++++++++++++++++        Execution (Happens immediately)        +++++++++++++++++++++
+        
+
