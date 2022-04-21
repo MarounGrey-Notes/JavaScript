@@ -1,15 +1,17 @@
 //FizzBuzz
 for (i=1; i < 101; i++) {
+  
   if (i % 15 == 0) {
-    return "fizzbuzz";
+    return "FizzBuzz";
   }
   else if (i % 3 == 0) {
-    return "fizz";
+    return "Fizz";
   }
   else if (i % 5 == 0) {
-    return "buzz"
+    return "Buzz"
   }
   else {
     return i;
   }
+  
 }
