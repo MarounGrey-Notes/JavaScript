@@ -65,8 +65,23 @@ JS Engine - program that executes javascript code <br>
         
 Interprited languages are much slower then compiled. Modern JavaScript uses mix between compilation and interpritation which is called **Just-in-time (JIT) compilation:** Entire code is converted in machine code at once, then executed immediately.
 
-       +++++++++++++++++        Step 1          ++++++++++++++++++++++++++++++++++++++++                    Step 2                     +++++++++++++++++++++
+        +++++++++++++++++        Step 1          ++++++++++++++++++++++++++++++++++++++++                    Step 2                    +++++++++++++++++++++
         +  Source Code  +     ------------->     +  Machine code (NOT a portable file  +     ------------------------------------>     +  Program running  +
         +++++++++++++++++      Compilation       +++++++++++++++++++++++++++++++++++++++        Execution (Happens immediately)        +++++++++++++++++++++
         
 
+# Execution Contexts and The Call Stack
+
+**Execution Context:** Environment in which a piece of JavaScript is executed. Stores all the necessary information for some code to be executed. <br>
+Compilation -> Creation of global execution context(for top-level code) -> Execution of top-level code (inside global EC) -> execution of functions and waiting for callbacks <br>
+### What's inside execution context?
+Generated during "creation phase", right before execution.<br>
+1. Variable Environment
+    * *let*, *const* and *var* declarations
+    * Functions
+    * arguments object
+2. Scope chain
+3. *this* keyword
+Note: Arrow functions do not have their *arguments objects* nor *this* keyword. Instead, they can use the arguments objects and this keyword from their closest regular function parent.
+<br><br>
+**Call Stack:** "Place" where execution contexts get stacked on top of each other, to keep track of where we are in the execution.
