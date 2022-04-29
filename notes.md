@@ -84,4 +84,5 @@ Generated during "creation phase", right before execution.<br>
 3. *this* keyword
 Note: Arrow functions do not have their *arguments objects* nor *this* keyword. Instead, they can use the arguments objects and this keyword from their closest regular function parent.
 <br><br>
-**Call Stack:** "Place" where execution contexts get stacked on top of each other, to keep track of where we are in the execution.
+### Call Stack
+"Call Stack" is a "place" where execution contexts get stacked on top of each other, to keep track of where we are in the execution.
