@@ -84,12 +84,14 @@ Generated during "creation phase", right before execution.<br>
 3. *this* keyword
 Note: Arrow functions do not have their *arguments objects* nor *this* keyword. Instead, they can use the arguments objects and this keyword from their closest regular function parent.
 <br><br>
+
 ### Call Stack
 "Call Stack" is a "place" where execution contexts get stacked on top of each other, to keep track of where we are in the execution.
+
 ### Scoping and Scope in JavaScript: Concepts
 * **Scoping:** How our program's variables are organized and accessed. "Where do variables live?" or "Where can we access a certain variable, and where not?"
 * **Lexical scoping:** Scoping is controlled by placement of functions and blocks in the code.
-* **Scope:** Space or environment in which a certain variable is declared (variable environment in case of functions). There is global scope, function scope, and block scope.
+* **Scope:** Space or environment in which a certain variable is declared (variable environment in case of functions). There is global scope, function scope, and block scope. Only *let* and *const* variables are block-scoped. Variables declared with *var* end up in the closest function scope.
 * **Scope of a variable:** Region of our code where a certain variable can be accessed.
 
 ![alt text](https://github.com/MarounGrey-Repos/Pics/blob/main/2022-05-10.png?raw=true)
