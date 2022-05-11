@@ -45,7 +45,7 @@ JS Engine - program that executes javascript code <br>
                 Runtime in Node.js: instead of Web APIs it uses C++ bindings and thread pool.
        
        
-## Compilation vs Interpretation
+# Compilation vs Interpretation
 
 **Compilation:** Entire code is conveted into machine code at once, and written to a binary file that can be executed by a computer. <br>
                            
@@ -74,6 +74,7 @@ Interprited languages are much slower then compiled. Modern JavaScript uses mix 
 
 **Execution Context:** Environment in which a piece of JavaScript is executed. Stores all the necessary information for some code to be executed. <br>
 Compilation -> Creation of global execution context(for top-level code) -> Execution of top-level code (inside global EC) -> execution of functions and waiting for callbacks <br>
+**Call Stack** is a "place" where execution contexts get stacked on top of each other, to keep track of where we are in the execution.
 ### What's inside execution context?
 Generated during "creation phase", right before execution.<br>
 1. Variable Environment
@@ -83,10 +84,8 @@ Generated during "creation phase", right before execution.<br>
 2. Scope chain
 3. *this* keyword
 Note: Arrow functions do not have their *arguments objects* nor *this* keyword. Instead, they can use the arguments objects and this keyword from their closest regular function parent.
-<br><br>
-**Call Stack** is a "place" where execution contexts get stacked on top of each other, to keep track of where we are in the execution.
 
-### Scoping and Scope in JavaScript: Concepts
+# Scoping and Scope in JavaScript: Concepts
 * **Scoping:** How our program's variables are organized and accessed. "Where do variables live?" or "Where can we access a certain variable, and where not?"
 * **Lexical scoping:** Scoping is controlled by placement of functions and blocks in the code.
 * **Scope:** Space or environment in which a certain variable is declared (variable environment in case of functions). There is global scope, function scope, and block scope. Only *let* and *const* variables are block-scoped. Variables declared with *var* end up in the closest function scope.
