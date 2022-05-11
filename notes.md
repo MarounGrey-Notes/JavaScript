@@ -84,9 +84,7 @@ Generated during "creation phase", right before execution.<br>
 3. *this* keyword
 Note: Arrow functions do not have their *arguments objects* nor *this* keyword. Instead, they can use the arguments objects and this keyword from their closest regular function parent.
 <br><br>
-
-### Call Stack
-"Call Stack" is a "place" where execution contexts get stacked on top of each other, to keep track of where we are in the execution.
+**Call Stack** is a "place" where execution contexts get stacked on top of each other, to keep track of where we are in the execution.
 
 ### Scoping and Scope in JavaScript: Concepts
 * **Scoping:** How our program's variables are organized and accessed. "Where do variables live?" or "Where can we access a certain variable, and where not?"
